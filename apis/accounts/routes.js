@@ -9,14 +9,10 @@ const {
   deleteAccount,
 } = require("./controllers");
 
-router.get("/", (req, res) => viewAccounts(res));
-
-router.get("/:username?", (req, res) => convertFundsToUSD(req, res));
-
-router.post("/", (req, res) => createAccount(req, res));
-
-router.put("/:accountId", (req, res) => updateAccount(req, res));
-
-router.delete("/:accountId", (req, res) => deleteAccount(req, res));
+router.get("/", viewAccounts);
+router.get("/:username?", convertFundsToUSD);
+router.post("/", createAccount);
+router.put("/:accountId", updateAccount);
+router.delete("/:accountId", deleteAccount);
 
 module.exports = router;

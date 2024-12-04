@@ -1,6 +1,8 @@
 const accounts = require("../../accounts");
 
-exports.viewAccounts = (res) => res.status(200).json(accounts);
+exports.viewAccounts = (req, res) => {
+  res.status(200).json(accounts);
+};
 
 exports.convertFundsToUSD = (req, res) => {
   const username = req.params.username;
