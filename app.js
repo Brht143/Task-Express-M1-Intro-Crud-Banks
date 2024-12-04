@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const querystring = require("querystring");
 
 const accounts = require("./accounts");
 
